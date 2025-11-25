@@ -1776,4 +1776,76 @@ body {
   }
 }
 
+/* ========== PARCHE RESPONSIVE ESPECÍFICO PARA MÓVIL ========== */
+
+/* Blindar ancho global y evitar scroll horizontal raro */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Imágenes y videos nunca más anchos que el viewport */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Carrusel y slides nunca se pasan de ancho */
+.carousel,
+.carousel-track,
+.carousel-slide,
+.intro-slide,
+.intro-slide-fusionado {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* En móvil chico quitamos el "scroll dentro del slide fusionado" */
+@media (max-width: 768px) {
+  .intro-slide-fusionado {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+}
+
+/* Asegurar que grid-2 no fuerce columnas dobles en móvil */
+@media (max-width: 768px) {
+  .grid-2,
+  .carousel-slide:nth-child(2) .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Chips y botones ocupando bien el ancho en pantallas pequeñas */
+@media (max-width: 768px) {
+  .chips-container {
+    width: 100%;
+  }
+
+  .chips-container .chip {
+    flex: 1 1 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .answer-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* Ajustar tooltip del chatbot para que no tape contenidos en móvil */
+@media (max-width: 480px) {
+  .chatbot-tooltip {
+    right: 10px;
+    left: 10px;
+    bottom: 70px;
+    max-width: calc(100vw - 20px);
+    font-size: 0.8rem;
+  }
+}
+
+
+
 
