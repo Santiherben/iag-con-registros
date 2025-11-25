@@ -1715,3 +1715,65 @@ body {
         font-size: 0.85rem !important;
     }
 }
+
+/* ========== MEJORAS RESPONSIVE ADICIONALES ========== */
+
+@media (max-width: 768px) {
+  /* Slide 2 - Formulario */
+  .carousel-slide:nth-child(2) {
+    padding: 20px 15px;
+  }
+  
+  .carousel-slide:nth-child(2) .intro-slide {
+    padding: 25px 15px;
+  }
+  
+  .carousel-slide:nth-child(2) .card {
+    padding: 18px !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Chips más grandes en móvil */
+  .chips-container .chip {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Texto más pequeño */
+  body {
+    font-size: 14px;
+  }
+  
+  .intro-slide h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  .intro-slide h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Carrusel más compacto */
+  .carousel-slide {
+    padding: 15px 10px;
+  }
+  
+  /* Botones más grandes */
+  .btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  
+  /* Inputs más grandes */
+  .input {
+    padding: 12px 15px;
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+}
+
+
