@@ -8,43 +8,44 @@
    ======================================== */
 const CONFIG = {
   // Escala Likert alineada a documento ANEP
-  likert: [
-    { 
-      id: 'Muy bajo', 
-      min: 0, 
-      max: 20, 
-      desc: 'Uso instrumental sin verificación. Necesitás fortalecer el pensamiento crítico y la comprensión de las limitaciones de la IA.',
-      color: '#ef4444'
-    },
-    { 
-      id: 'Bajo', 
-      min: 21, 
-      max: 40, 
-      desc: 'Reconocés potencial pero falta verificación sistemática. Trabajá en transparencia y trazabilidad de fuentes.',
-      color: '#f59e0b'
-    },
-    { 
-      id: 'Medio', 
-      min: 41, 
-      max: 60, 
-      desc: 'Uso con criterio en varios aspectos. Fortalecé conciencia de sesgos y declaración de autoría.',
-      color: '#eab308'
-    },
-    { 
-      id: 'Alto', 
-      min: 61, 
-      max: 80, 
-      desc: 'Integración crítica frecuente. Seguí refinando prácticas en contextos complejos y diversos.',
-      color: '#84cc16'
-    },
-    { 
-      id: 'Muy alto', 
-      min: 81, 
-      max: 100, 
-      desc: 'Excelencia: verificás información, mitigás sesgos, declarás autoría y aportás valor humano significativo.',
-      color: '#22c55e'
-    }
-  ],
+likert: [
+  { 
+    id: 'Amplio margen de mejora', 
+    min: 0, 
+    max: 20, 
+    desc: 'Las prácticas muestran un uso inicial y poco sistemático. Es un buen punto de partida para comenzar a incorporar verificaciones y criterios más consistentes.',
+    color: '#ef4444'
+  },
+  { 
+    id: 'En proceso inicial', 
+    min: 21, 
+    max: 40, 
+    desc: 'Se reconocen algunas buenas prácticas, aunque todavía falta incorporarlas con regularidad. Hay espacio para reforzar revisión, contraste de información y decisiones más informadas.',
+    color: '#f59e0b'
+  },
+  { 
+    id: 'Desarrollo progresivo', 
+    min: 41, 
+    max: 60, 
+    desc: 'Se evidencia un avance claro: se combinan decisiones razonadas y uso cuidadoso. Aún queda margen para afinar criterios y fortalecer la autonomía en el proceso.',
+    color: '#eab308'
+  },
+  { 
+    id: 'Prácticas consolidadas', 
+    min: 61, 
+    max: 80, 
+    desc: 'Se integra la herramienta con criterio y constancia. El trabajo es estable y muestra una lectura madura de la información y sus implicaciones.',
+    color: '#84cc16'
+  },
+  { 
+    id: 'Nivel avanzado', 
+    min: 81, 
+    max: 100, 
+    desc: 'El uso demuestra solidez, claridad y revisión cuidadosa. Se aporta valor personal y se aplican buenos criterios de manera sostenida.',
+    color: '#22c55e'
+  }
+]
+
 
   // Árbol de decisiones por perfil
   perfiles: {
@@ -375,3 +376,4 @@ const state = {
 
 // ✅ AGREGAR ESTA LÍNEA:
 window.state = state;
+
