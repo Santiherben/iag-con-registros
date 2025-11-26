@@ -44,7 +44,7 @@ likert: [
     desc: 'El uso demuestra solidez, claridad y revisión cuidadosa. Se aporta valor personal y se aplican buenos criterios de manera sostenida.',
     color: '#22c55e'
   }
-]
+],
 
 
   // Árbol de decisiones por perfil
@@ -376,4 +376,5 @@ const state = {
 
 // ✅ AGREGAR ESTA LÍNEA:
 window.state = state;
+
 
