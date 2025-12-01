@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+  Copyright (c) 2025 Santiago Hernández
+  Licensed under the MIT License.
+  See LICENSE for details.
+-->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#6366f1">
+  <title>IA Educativa ANEP - Uso Crítico y Reflexivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER - NAVEGACIÓN PRINCIPAL
+       ============================================ -->
+  <header class="app-header">
+    <h1 id="homeBtn" class="home-btn" style="cursor:pointer; display:flex; align-items:center; gap:0.5rem;">
+      <div class="logo">AI</div>
+      <span>🏠 IA Educativa ANEP</span>
+    </h1>
+
+    <div class="header-actions">
+      <a href="https://horizontespedagogicos.ibero.edu.co/article/view/3235" 
+         target="_blank" 
+         class="btn-academic">
+        📄 Artículo académico
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span id="themeIcon">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================
+       CONTENEDOR PRINCIPAL
+       ============================================ -->
+  <div class="container">
+
+    <!-- ============================================
+         PANTALLA 1: INTRO + CARRUSEL (2 SLIDES)
+         ============================================ -->
+    <section id="screenIntro" class="fade-in">
+      <div class="card">
+        <div class="carousel">
+
+          <!-- TRACK: CONTENEDOR DE SLIDES -->
+          <div class="carousel-track" id="carouselTrack">
+            
+            <!-- ==========================================
+                 SLIDE 1: QUIÉNES SOMOS + POR QUÉ (FUSIONADO)
+                 ========================================== -->
+            <div class="carousel-slide">
+              <div class="intro-slide intro-slide-fusionado">
+                
+                <!-- Sección: Quiénes somos -->
+                <div class="seccion-quienes-somos">
+                  <h2>Quiénes somos</h2>
+
+                  <div class="team-grid">
+                    <div class="team-member">
+                      <h4>Prof. Santiago Hernández</h4>
+                      <p>Especialista en Tecnología Educativa</p>
+                      <p>Maestrando en Educación</p>
+                      <p>Diplomado en IA y educación</p>
+                      <p>Investigador</p>
+                      <p><a href="https://orcid.org/0009-0001-9086-1490" target="_blank">🔗 ORCID</a></p>
+                    </div>
+
+                    <div class="team-member">
+                      <h4>Prof. Diego Daluz</h4>
+                      <p>Diplomado en Ciencias Sociales y nuevas tecnologías</p>
+                      <p>Maestrando en Educación</p>
+                      <p>Investigador</p>
+                      <p><a href="https://orcid.org/0009-0007-3089-6652" target="_blank">🔗 ORCID</a></p>
+                    </div>
+                  </div>
+                  
+                  <!-- Card de información del proyecto -->
+                  <div class="card card-info-proyecto">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary);">
+                      <p><strong style="color: var(--primary);">📅 Fecha de creación:</strong> Octubre 2024</p>
+                      <p><strong style="color: var(--primary);">📄 Publicación académica:</strong> <a href="https://horizontespedagogicos.ibero.edu.co/article/view/3235" target="_blank" style="color: var(--primary); text-decoration: none;">Horizontes Pedagógicos</a></p>
+                      <p><strong style="color: var(--primary);">📖 Marco referencial:</strong> <a href="https://www.anep.edu.uy/sites/default/files/images/2024/noticias/julio/240709/Documento%20IA.pdf" target="_blank" style="color: var(--primary); text-decoration: none;">ANEP - IA en Educación (2024)</a></p>
+                      <p><strong style="color: var(--primary);">©️ Derechos de uso:</strong> Herramienta de uso libre para fines educativos. Se permite copiar, modificar y distribuir citando autoría.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Divisor visual entre secciones -->
+                <div class="section-divider"></div>
+
+                <!-- Sección: Por qué esta herramienta -->
+                <div class="seccion-porque">
+                  <h2>Por qué esta herramienta</h2>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5; max-width: 750px; margin: 0.8rem auto;">
+                    Ante la enorme cantidad de tensiones que se generan en contextos educativos en relación con la Inteligencia Artificial Generativa, esta herramienta surge como una guía práctica tanto para docentes como para estudiantes.
+                  </p>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5; max-width: 750px; margin: 0.8rem auto;">
+                    Basada en el marco de referencia de ANEP sobre IA en Educación, busca promover un uso crítico, reflexivo y responsable de las tecnologías de inteligencia artificial en el ámbito educativo.
+                  </p>
+
+                  <!-- Card de objetivos -->
+                  <div class="card card-objetivos">
+                    <h3 style="margin-bottom: 0.6rem; font-size: 1.1rem;">Objetivos principales:</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.5; font-size: 0.9rem;">
+                      <li>Autoevaluar prácticas actuales de uso de IA</li>
+                      <li>Identificar áreas de mejora propia</li>
+                      <li>Proporcionar recomendaciones personalizadas</li>
+                      <li>Fomentar la reflexión crítica sobre el uso de IA</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- FIN SLIDE 1 -->
+
+            <!-- ==========================================
+                 SLIDE 2: FORMULARIO DE CARACTERIZACIÓN
+                 ========================================== -->
+            <div class="carousel-slide">
+              <div class="intro-slide">
+                <h2>Comenzar el proceso de reflexión crítica de mis prácticas</h2>
+                <p style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem;">
+                  Este cuestionario interactivo te ayudará a evaluar tu práctica y recibir recomendaciones personalizadas.
+                </p>
+
+                <!-- Principios clave UNESCO/ANEP -->
+                <div class="card" style="background: var(--bg-main); text-align: left; margin: 2rem auto; max-width: 800px;">
+                  <h3 style="margin-bottom: 1rem;">Marcos de UNESCO y ANEP - Principios clave</h3>
+                  <div class="grid grid-2">
+                    
+                    <div class="resource-card principle-card">
+                      <div class="resource-content">
+                        <div class="principle-header">
+                          <h4>Verificación</h4>
+                          <button type="button" class="principle-info-btn" data-principle="verificacion">?</button>
+                        </div>
+                        <p>Contrastar información con fuentes confiables</p>
+                      </div>
+                    </div>
+
+                    <div class="resource-card principle-card">
+                      <div class="resource-content">
+                        <div class="principle-header">
+                          <h4>Transparencia</h4>
+                          <button type="button" class="principle-info-btn" data-principle="transparencia">?</button>
+                        </div>
+                        <p>Declarar uso y autoría de IA</p>
+                      </div>
+                    </div>
+
+                    <div class="resource-card principle-card">
+                      <div class="resource-content">
+                        <div class="principle-header">
+                          <h4>Sesgos</h4>
+                          <button type="button" class="principle-info-btn" data-principle="sesgos">?</button>
+                        </div>
+                        <p>Reconocer y mitigar sesgos</p>
+                      </div>
+                    </div>
+
+                    <div class="resource-card principle-card">
+                      <div class="resource-content">
+                        <div class="principle-header">
+                          <h4>Valor agregado</h4>
+                          <button type="button" class="principle-info-btn" data-principle="valor_agregado">?</button>
+                        </div>
+                        <p>Aportes personales y contexto</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Selección de perfil (Docente/Estudiante) -->
+                <div style="margin: 2rem auto; max-width: 600px;">
+                  <h3 style="margin-bottom: 1rem;">Seleccioná tu perfil</h3>
+                  <div class="chips-container" style="justify-content: center;">
+                    <div class="chip" data-profile="docente"><span>Docente</span></div>
+                    <div class="chip" data-profile="estudiante"><span>Estudiante</span></div>
+                  </div>
+                </div>
+
+                <!-- Campo de nivel educativo (aparece dinámicamente según perfil) -->
+                <div id="nivelEducativoWrapper" style="max-width: 500px; margin: 1.5rem auto; display: none;">
+                  <label for="nivelEducativo" style="display:block; margin-bottom:0.5rem; font-weight:600;">
+                    <span id="nivelEducativoLabel">En qué nivel trabajás</span>
+                  </label>
+                  <select id="nivelEducativo" class="input">
+                    <option value="">Seleccioná una opción</option>
+                    <!-- Opciones se cargan dinámicamente según perfil -->
+                  </select>
+                </div>
+
+                <!-- Campo de nombre (opcional) -->
+                <div style="max-width: 400px; margin: 1.5rem auto 1rem auto;">
+                  <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Tu nombre (opcional)</label>
+                  <input type="text" id="playerName" class="input" placeholder="Ingresá tu nombre o un seudónimo" />
+                </div>
+
+                <!-- Selector de país -->
+                <div style="max-width: 400px; margin: 1rem auto;">
+                  <label for="countrySelect" style="display:block; margin-bottom:0.5rem; font-weight:600;">País</label>
+                  <select id="countrySelect" name="pais" class="input">
+                    <option value="Uruguay" selected>Uruguay</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="México">México</option>
+                    <option value="España">España</option>
+                    <option value="Otro">Otro (especificar)</option>
+                  </select>
+                </div>
+
+                <!-- Campo "Otro país" (aparece si selecciona "Otro") -->
+                <div id="countryOtherWrapper" style="max-width: 400px; margin: 0 auto 1rem auto; display:none;">
+                  <label for="countryOther" style="display:block; margin-bottom:0.5rem; font-weight:600;">Especificá tu país</label>
+                  <input type="text" id="countryOther" class="input" placeholder="Ingresá tu país" />
+                </div>
+
+                <!-- Campo oculto para guardar el país final -->
+                <input type="hidden" id="countryFinal" value="Uruguay" />
+
+                <!-- Nivel de familiaridad con el tema -->
+                <div style="max-width: 500px; margin: 1.5rem auto;">
+                  <label for="familiaridadInicial" style="display:block; margin-bottom:0.5rem; font-weight:600;">
+                    Antes de comenzar, ¿qué nivel de familiaridad tenés con este tema?
+                  </label>
+                  <select id="familiaridadInicial" class="input">
+                    <option value="">Seleccioná una opción</option>
+                    <option value="Nunca lo estudié">Nunca lo estudié</option>
+                    <option value="Lo conozco superficialmente">Lo conozco superficialmente</option>
+                    <option value="Lo he trabajado en cursos o actividades">Lo he trabajado en cursos o actividades</option>
+                    <option value="Lo domino a nivel práctico">Lo domino a nivel práctico</option>
+                    <option value="Lo manejo en profundidad o lo enseño">Lo manejo en profundidad o lo enseño</option>
+                  </select>
+                </div>
+
+                <!-- Uso de recursos similares -->
+                <div style="max-width: 500px; margin: 1.5rem auto;">
+                  <p style="margin-bottom:0.5rem; font-weight:600;">
+                          ¿Has usado recursos similares sobre este tema (guías, simuladores, cursos en línea)?
+                  </p>
+                  <div style="display:flex; flex-wrap:wrap; gap:1rem; font-size:0.95rem;">
+                    <label style="display:flex; align-items:center; gap:0.35rem;">
+                      <input type="radio" name="recursosSimilares" value="Sí">
+                      <span>Sí</span>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:0.35rem;">
+                      <input type="radio" name="recursosSimilares" value="No">
+                      <span>No</span>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:0.35rem;">
+                      <input type="radio" name="recursosSimilares" value="No estoy seguro/a">
+                      <span>No estoy seguro/a</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Checkbox de consentimiento -->
+                <div class="mt-2 consent-box" style="max-width: 700px; margin: 1.5rem auto 0 auto; display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; color:var(--text-secondary);">
+                  <input type="checkbox" id="consentTracking" checked style="margin-top:0.15rem; cursor:pointer;" />
+                  <div>
+                    <label for="consentTracking" style="cursor:pointer; line-height:1.4; font-weight:500;">
+                      Acepto que mis respuestas se registren de forma anónima con fines educativos y para mejorar esta herramienta.
+                    </label>
+                    <p class="consent-help" style="margin-top:0.25rem;">
+                      El nombre es opcional y podés usar un seudónimo. Se guarda únicamente: perfil, país, seudónimo, nivel de familiaridad, uso de recursos similares y registro del cuestionario. Si desmarcás esta opción, no se guardará nada.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- FIN SLIDE 2 -->
+
+          </div>
+          <!-- FIN CAROUSEL-TRACK -->
+
+          <!-- ==========================================
+               CONTROLES DEL CARRUSEL
+               (Botones de navegación + Dots + Botón inicio)
+               ========================================== -->
+          <div class="carousel-controls">
+            <!-- Botón "Anterior" (oculto al inicio) -->
+            <button class="carousel-btn" id="prevSlide" style="display: none;">
+              ← Anterior
+            </button>
+            
+            <!-- Dots de navegación (2 puntos para 2 slides) -->
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+            </div>
+
+            <!-- Botón "Siguiente" (visible al inicio) -->
+            <button class="carousel-btn" id="nextSlide">
+              Siguiente →
+            </button>
+
+            <!-- Botón "Comenzar cuestionario" (aparece en el último slide) -->
+            <button class="btn btn-primary hidden" id="startBtn">
+              Comenzar cuestionario
+            </button>
+          </div>
+          <!-- FIN CONTROLES DEL CARRUSEL -->
+
+        </div>
+        <!-- FIN CAROUSEL -->
+      </div>
+      <!-- FIN CARD -->
+    </section>
+    <!-- FIN PANTALLA 1: INTRO + CARRUSEL -->
+
+    <!-- ==========================================
+         TOOLTIP PRINCIPIOS UNESCO/ANEP
+         ========================================== -->
+    <div id="principleTooltip" class="principle-tooltip hidden" role="dialog" aria-modal="true">
+      <div class="tooltip-header">
+        <span id="tooltipTitle" class="tooltip-title">Principio</span>
+        <button type="button" class="tooltip-close" aria-label="Cerrar">×</button>
+      </div>
+
+      <div class="tooltip-tabs">
+        <button type="button" class="tooltip-tab active" data-source="unesco">UNESCO</button>
+        <button type="button" class="tooltip-tab" data-source="anep">ANEP</button>
+      </div>
+
+      <div id="tooltipBody" class="tooltip-body"></div>
+    </div>
+
+    <!-- ==========================================
+         PANTALLA 2: CUESTIONARIO INTERACTIVO
+         ========================================== -->
+    <section id="screenGame" class="hidden">
+      <div class="grid" style="gap: 1.5rem;">
+        
+        <!-- Barra de progreso -->
+        <div style="grid-column: 1 / -1;">
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div class="progress-text" id="progressText">Pregunta 1 de 8</div>
+          </div>
+        </div>
+
+        <!-- Card de pregunta -->
+        <div>
+          <div class="card question-card">
+            <div class="question-number" id="questionNumber">1</div>
+            <h2 class="question-title" id="questionTitle">Pregunta</h2>
+            <p class="question-help" id="questionHelp">Descripción de la pregunta</p>
+
+            <!-- Botones de respuesta Sí/No -->
+            <div class="answer-buttons">
+              <button class="btn btn-success" id="yesBtn">Sí</button>
+              <button class="btn btn-danger" id="noBtn">No</button>
+            </div>
+
+            <!-- Box de feedback (oculto hasta responder) -->
+            <div id="feedbackBox" class="hidden"></div>
+
+            <!-- Controles de navegación del cuestionario -->
+            <div class="flex flex-center gap-2 flex-wrap mt-3">
+              <button class="btn btn-outline" id="backBtn" disabled>Anterior</button>
+              <button class="btn btn-outline" id="contextBtn">Contexto ANEP</button>
+              <button class="btn btn-primary" id="nextBtn" disabled>Siguiente</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de progreso y timeline -->
+        <div>
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Tu progreso</h3>
+            
+            <!-- Timeline de respuestas -->
+            <div class="timeline" id="timeline">
+              <p class="text-center" style="color: var(--text-muted);">Sin respuestas aún</p>
+            </div>
+
+            <!-- Escala Likert de nivel de uso crítico -->
+            <div class="likert-container mt-3">
+              <h4 style="margin-bottom: 1rem;">Nivel de uso crítico</h4>
+              <div class="likert-scale">
+                <div class="likert-marker" id="likertMarker" style="left: 50%"></div>
+              </div>
+              <div class="likert-labels">
+                <span>Muy bajo</span>
+                <span>Alto</span>
+              </div>
+              <div class="likert-level" id="likertLevel">—</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIN PANTALLA 2: CUESTIONARIO -->
+
+    <!-- ==========================================
+         PANTALLA 3: RESULTADOS Y RECOMENDACIONES
+         ========================================== -->
+    <section id="screenResult" class="hidden fade-in">
+      
+      <!-- Certificado de completitud -->
+      <div class="certificate mb-3">
+        <div class="certificate-seal">★</div>
+        <h2 id="resultTitle">Completado</h2>
+        <p id="resultDesc">Has completado el cuestionario</p>
+        <div style="margin-top: 2rem;">
+          <div class="likert-level" style="font-size: 1.5rem; color: white;" id="resultLevel">Nivel: —</div>
+        </div>
+      </div>
+
+      <!-- Grid de recomendaciones -->
+      <div class="grid grid-2">
+        <!-- Acuerdos didácticos ANEP -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem;">Acuerdos didácticos ANEP</h3>
+          <ul id="didacticaList" style="list-style: none; padding: 0;"></ul>
+        </div>
+
+        <!-- Herramientas recomendadas -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem;">Herramientas recomendadas</h3>
+          <div class="grid" style="gap: 1rem;">
+            <div class="resource-card" onclick="mostrarHerramientas('educativo')" style="cursor: pointer;">
+              <div class="resource-content">
+                <h4>Asistentes con modo educativo</h4>
+                <p>Interfaces que promueven verificación, citas y transparencia</p>
+              </div>
+            </div>
+
+            <div class="resource-card" onclick="mostrarHerramientas('citador')" style="cursor: pointer;">
+              <div class="resource-content">
+                <h4>Editores con citador integrado</h4>
+                <p>Herramientas que sugieren fuentes verificables automáticamente</p>
+              </div>
+            </div>
+
+            <div class="resource-card" onclick="mostrarHerramientas('sesgos')" style="cursor: pointer;">
+              <div class="resource-content">
+                <h4>Verificadores de sesgos</h4>
+                <p>Analizan texto generado para identificar posibles sesgos</p>
+              </div>
+            </div>
+
+            <div class="resource-card" onclick="mostrarHerramientas('prompts')" style="cursor: pointer;">
+              <div class="resource-content">
+                <h4>Plataformas de prompts éticos</h4>
+                <p>Enseñan a formular consultas que promuevan pensamiento crítico</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline completo del recorrido -->
+      <div class="card mt-3">
+        <h3 style="margin-bottom: 1rem;">Tu recorrido completo</h3>
+        <div class="timeline" id="finalTimeline"></div>
+      </div>
+
+      <!-- Recursos educativos adicionales -->
+      <div class="card mt-3">
+        <h3 style="margin-bottom: 1rem;">Recursos educativos ANEP - UNESCO - CEIBAL</h3>
+        <div class="grid">
+          <a href="https://www.anep.edu.uy/sites/default/files/images/2024/noticias/julio/240709/Documento%20IA.pdf" target="_blank" class="resource-card" style="text-decoration: none; color: inherit;">
+            <div class="resource-content">
+              <h4>Documento IA ANEP 2024</h4>
+              <p>Marco referencial completo sobre uso de IA en educación</p>
+            </div>
+          </a>
+
+          <a href="https://unesdoc.unesco.org/ark:/48223/pf0000389227" target="_blank" class="resource-card" style="text-decoration: none; color: inherit;">
+            <div class="resource-content">
+              <h4>Guía para el uso de IA - UNESCO</h4>
+              <p>Guía para el uso de IA generativa en educación e investigación</p>
+            </div>
+          </a>
+
+          <a href="https://documentos.ceibal.edu.uy/portal/2024/06/Construyendo-Inteligencia-Artificial-para-la-educacion.pdf" target="_blank" class="resource-card" style="text-decoration: none; color: inherit;">
+            <div class="resource-content">
+              <h4>CEIBAL</h4>
+              <p>Construyendo Inteligencia Artificial para la educación</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Botones de acción finales -->
+      <div class="flex flex-center gap-2 flex-wrap mt-3">
+        <button class="btn btn-primary" id="downloadBtn">Descargar reporte</button>
+        <button class="btn btn-outline" id="copyBtn">Copiar resumen</button>
+        <button class="btn btn-outline" id="restartBtn">Reiniciar</button>
+      </div>
+
+    </section>
+    <!-- FIN PANTALLA 3: RESULTADOS -->
+
+  </div>
+  <!-- FIN CONTENEDOR PRINCIPAL -->
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="app-footer">
+    <p>
+      Creado por <strong>Prof. Esp. Santiago Hernández</strong> y <strong>Prof. Diego Daluz</strong><br>
+      Basado en el <a href="https://www.anep.edu.uy/sites/default/files/images/2024/noticias/julio/240709/Documento%20IA.pdf" target="_blank">Marco ANEP sobre IA en Educación</a>
+    </p>
+    <p style="margin-top: 0.75rem;">
+      📄 <a href="https://horizontespedagogicos.ibero.edu.co/article/view/3235" target="_blank">Artículo académico publicado</a>
+    </p>
+    <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
+      🔄 Sitio en constante actualización con nuevas funcionalidades y mejoras
+    </p>
+  </footer>
+
+  <!-- ==========================================
+       MODAL GENERAL (para contexto ANEP, herramientas, etc.)
+       ========================================== -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Información</h3>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SCRIPTS JAVASCRIPT
+       ========================================== -->
+  <script src="configuracion-ia.js"></script>
+  <script src="ui-ia.js"></script>
+  <script src="juego-ia.js"></script>
+  <script src="certificado-ia.js"></script>
+  <script src="chatbot-component.js"></script>
+
+</body>
+</html>
